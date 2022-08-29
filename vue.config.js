@@ -7,7 +7,7 @@ module.exports = defineConfig({
   chainWebpack: (config) => {
     config.module.rule('js')
       .test(/\.js$/)
-      .exclude.add(path.resolve('node_modules'))
+      .exclude.add(path.resolve(__dirname, 'node_modules'))
       .end()
       .use(importMetaLoader)
       .loader('import-meta-loader')
